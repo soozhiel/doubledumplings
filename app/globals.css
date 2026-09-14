@@ -77,3 +77,75 @@ footer{padding:45px 0 70px;border-top:1px solid var(--line);display:flex;justify
 @media(max-width:940px){.share-strip,.editorial,.pearcecision,.brief-intro,form,.confirmation,footer{margin-left:28px;margin-right:28px}}
 @media(max-width:700px){body{font-size:15px}.poster-stage{min-height:auto;padding:0}.poster-wrap{width:100%}.share-strip{padding:52px 0 85px}.editorial{padding:95px 0}.editorial-grid,.what,.pearcecision{grid-template-columns:1fr;gap:42px}.editorial h1,.brief-intro h1,.confirmation h1{font-size:clamp(3.5rem,18vw,5.3rem)}.why h1 br{display:none}.pearcecision{padding:80px 0 95px}.brief-intro{padding:110px 0 75px}.warning,.independence,.commercial{margin-bottom:85px;padding:38px 24px}.form-section{padding-bottom:85px;margin-bottom:85px}.form-section>header{grid-template-columns:1fr;gap:12px;margin-bottom:50px}.form-section>header span{padding:0}.two,.value-grid,.choices{grid-template-columns:1fr}.field{margin-bottom:45px}.choice{padding:15px 6px 15px 0}.section-copy{margin-bottom:45px}.send button{padding:22px 16px;font-size:.72rem}footer{flex-direction:column;padding-bottom:50px}.confirmation{padding-top:90px}.what-copy strong{margin:30px 0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.conditional{animation:none}}
+
+/* Quiet editorial scale beneath the poster. */
+body{font-size:17px;line-height:1.58}
+.share-strip{padding:58px 0 88px}
+.share-strip p,.eyebrow{margin-bottom:12px;font-size:clamp(11px,.8vw,13px);letter-spacing:.24em}
+.share-strip h2{margin-bottom:24px;font-size:clamp(24px,2.3vw,31px)}
+.editorial{padding:104px 0}
+.editorial-grid{grid-template-columns:minmax(240px,.8fr) 1.2fr;gap:72px}
+.editorial h1{margin-top:10px;font-size:clamp(42px,4vw,52px);line-height:1.02;letter-spacing:-.025em;overflow-wrap:normal;word-break:normal}
+.brief-intro h1{margin-top:10px;max-width:760px;font-size:clamp(52px,5.2vw,64px);line-height:.97;letter-spacing:-.035em}
+.confirmation h1{margin:10px 0 28px;font-size:clamp(48px,5vw,60px);line-height:1;letter-spacing:-.03em}
+.editorial-grid p{margin-bottom:1.15rem;font-size:clamp(17px,1.3vw,19px)}
+.what{gap:72px}
+.what-copy p{margin-bottom:10px;font-size:clamp(20px,2vw,27px);line-height:1.36}
+.what-copy strong{margin:26px 0;font-size:clamp(42px,4vw,52px);line-height:.95}
+.pearcecision{padding:58px 0 68px;gap:72px}
+.pearcecision>p:last-child{max-width:560px;font-size:clamp(18px,1.7vw,22px);line-height:1.42}
+.brief-intro{padding:112px 0 72px}
+.brief-intro>p:last-child{margin-top:30px;font-size:clamp(19px,1.8vw,24px);line-height:1.42}
+.warning,.independence,.commercial{margin-bottom:82px;padding:42px 46px}
+.warning h2,.independence h2,.commercial h2{margin:8px 0 22px;font-size:clamp(27px,2.6vw,34px);line-height:1.12}
+.warning strong{margin-top:24px;font-size:19px}
+.form-section{padding-bottom:78px;margin-bottom:78px}
+.form-section>header{grid-template-columns:58px 1fr;margin-bottom:42px}
+.form-section>header h2{font-size:clamp(28px,2.6vw,34px);line-height:1.08;letter-spacing:-.02em;overflow-wrap:normal;word-break:normal}
+.field{margin-bottom:38px}
+.field>span{margin-bottom:13px;font-size:clamp(17px,1.45vw,19px);line-height:1.36}
+.field small,.microcopy{margin-top:10px;font-size:clamp(14px,1vw,15px);letter-spacing:.01em}
+.choice{gap:13px;min-height:48px;padding:13px 12px 13px 0}
+.key-question{padding:28px 0}
+.key-question>span{font-size:clamp(18px,1.6vw,21px)}
+.section-lead{margin-bottom:18px;font-size:clamp(26px,2.6vw,34px);line-height:1.08}
+.section-copy{margin-bottom:40px;font-size:clamp(16px,1.3vw,18px)}
+.editorial-note{margin:40px 0;font-size:clamp(18px,1.5vw,21px)}
+.required-check{margin-top:32px;padding:18px 0;font-size:17px}
+.final-vote{margin-top:46px;font-size:19px}
+.confirmation{min-height:70vh;padding:90px 0 130px}
+
+@media(max-width:700px){
+  body{font-size:16px;line-height:1.55}
+  .share-strip,.editorial,.pearcecision,.brief-intro,form,.confirmation,footer{margin-left:22px;margin-right:22px}
+  .share-strip{padding:42px 0 60px}.share-strip h2{font-size:23px}
+  .editorial{padding:62px 0}
+  .editorial-grid,.what,.pearcecision{grid-template-columns:1fr;gap:28px}
+  .editorial h1{font-size:clamp(32px,9.5vw,38px);line-height:1.06;letter-spacing:-.015em;white-space:normal}
+  .brief-intro h1{font-size:clamp(36px,10.5vw,44px);line-height:1.02;letter-spacing:-.025em}
+  .confirmation h1{font-size:clamp(36px,10vw,42px);line-height:1.03}
+  .editorial-grid p{margin-bottom:15px;font-size:16px}
+  .what-copy p{font-size:19px;line-height:1.4}.what-copy strong{margin:22px 0;font-size:38px}
+  .pearcecision{padding:42px 0 46px;gap:14px}.pearcecision>p:last-child{font-size:18px}
+  .brief-intro{padding:68px 0 50px}.brief-intro>p:last-child{margin-top:22px;font-size:18px}
+  .warning,.independence,.commercial{margin-bottom:58px;padding:30px 22px}
+  .warning h2,.independence h2,.commercial h2{margin-bottom:18px;font-size:clamp(25px,7.5vw,29px);line-height:1.12}
+  .form-section{padding-bottom:56px;margin-bottom:56px}
+  .form-section>header{grid-template-columns:1fr;gap:5px;margin-bottom:30px}
+  .form-section>header span{padding:0;font-size:10px}
+  .form-section>header h2{font-size:clamp(25px,7.5vw,30px);line-height:1.1;letter-spacing:-.01em}
+  .two,.value-grid,.choices{grid-template-columns:1fr}
+  .grid{gap:24px}.field{margin-bottom:30px}.field>span{margin-bottom:11px;font-size:17px}
+  .choice{min-height:48px;padding:12px 6px 12px 0}
+  .key-question{padding:22px 0}.key-question>span{font-size:18px;line-height:1.38}
+  .section-lead{font-size:28px}.section-copy{margin-bottom:30px;font-size:16px}
+  .editorial-note{margin:30px 0;font-size:18px}.required-check{margin-top:28px;padding:16px 0}
+  .final-vote{margin-top:34px;font-size:18px}
+  .send button{min-height:58px;padding:18px 14px;font-size:11px}
+  footer{padding:34px 0 44px}.confirmation{padding-top:68px}
+}
+@media(max-width:360px){
+  .share-strip,.editorial,.pearcecision,.brief-intro,form,.confirmation,footer{margin-left:20px;margin-right:20px}
+  .editorial h1{font-size:32px}.brief-intro h1{font-size:36px}.form-section>header h2{font-size:25px}
+  .warning,.independence,.commercial{padding:26px 18px}
+}
