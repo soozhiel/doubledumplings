@@ -5,7 +5,7 @@ const title = "Mr & Mrs Pearce — Independent Thinking for High-Stakes Decision
 const description = "Private independent problem diagnosis for owners, CEOs and decision makers facing consequential decisions. International engagements by request.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://mr-mrs-pearce.vercel.app"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://mr-mrs-pearce-caelverum.vercel.app"),
   title,
   description,
   alternates: { canonical: "/" },
