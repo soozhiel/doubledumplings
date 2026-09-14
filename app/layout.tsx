@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const title = "Mr & Mrs Pearce — Independent Thinking for High-Stakes Decisions";
-const description = "Private independent problem diagnosis for owners, CEOs and decision makers facing consequential decisions. International engagements by request.";
+const title = "Double Dumplings — Independent Thinking for High-Stakes Decisions";
+const description = "Bring us the problem. Independent perspective for owners, CEOs and decision makers before consequential moves. Private international engagements by request.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://mr-mrs-pearce-caelverum.vercel.app"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://doubledumplings.vercel.app"),
   title,
   description,
   alternates: { canonical: "/" },
-  openGraph: { title, description, type: "website", images: [{ url: "/api/poster", width: 1024, height: 1536, alt: "Mr & Mrs Pearce — Independent Thinking for High-Stakes Decisions" }] },
+  openGraph: { title, description, type: "website", siteName: "Double Dumplings", images: [{ url: "/api/poster", width: 1024, height: 1536, alt: "Double Dumplings — independent perspective, real questions, better decisions" }] },
   twitter: { card: "summary_large_image", title, description, images: ["/api/poster"] },
   icons: { icon: "/favicon.svg" },
 };
