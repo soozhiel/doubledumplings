@@ -42,18 +42,27 @@ async function isLimited(key: string) {
   }
 }
 
-async function storeCallingCard(id: string, data: z.infer<typeof callingCardSchema>) {
-  const url = process.env.SUPABASE_URL?.replace(/\/$/, "");
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  if (!url || !key) return { ok: false as const, missing: true as const };
+async function deliverCallingCard(id: string, data: z.infer<typeof callingCardSchema>) {
+  const webhookUrl = process.env.CALLING_CARD_WEBHOOK_URL;
+  if (!webhookUrl) return { ok: false as const, missing: true as const };
   const { website: _honeypot, ...payload } = data;
-  const response = await fetch(`${url}/rest/v1/private_briefs`, {
-    method: "POST",
-    headers: { apikey: key, Authorization: `Bearer ${key}`, "Content-Type": "application/json", Prefer: "return=minimal" },
-    body: JSON.stringify({ id, name: data.name, organisation: "", country: data.bestCity, contact_email: data.email, payload, status: "new" }),
-    cache: "no-store",
-  });
-  return { ok: response.ok, missing: false as const };
+  try {
+    const response = await fetch(webhookUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        id,
+        submittedAt: new Date().toISOString(),
+        source: "doubledumplings.vercel.app",
+        ...payload,
+      }),
+      cache: "no-store",
+      signal: AbortSignal.timeout(10_000),
+    });
+    return { ok: response.ok, missing: false as const };
+  } catch {
+    return { ok: false as const, missing: false as const };
+  }
 }
 
 export async function POST(request: NextRequest) {
@@ -74,8 +83,8 @@ export async function POST(request: NextRequest) {
   if (!parsed.success) return NextResponse.json({ error: "Please complete the required fields and check your contact email." }, { status: 400 });
 
   const id = crypto.randomUUID();
-  const stored = await storeCallingCard(id, parsed.data);
-  if (stored.missing) return NextResponse.json({ error: "Calling-card delivery is not connected yet. No information has been accepted or stored." }, { status: 503 });
-  if (!stored.ok) return NextResponse.json({ error: "Your calling card could not be stored securely. Please try again later." }, { status: 502 });
+  const delivered = await deliverCallingCard(id, parsed.data);
+  if (delivered.missing) return NextResponse.json({ error: "Calling-card delivery is not connected yet. No information has been accepted or stored." }, { status: 503 });
+  if (!delivered.ok) return NextResponse.json({ error: "Your calling card could not be delivered securely. Please try again later." }, { status: 502 });
   return NextResponse.json({ ok: true, reference: id });
 }
