@@ -165,6 +165,9 @@ body{font-size:17px;line-height:1.58}
 .received-tick{width:46px;height:46px;margin:0 auto 34px;border:1px solid #5f8f68;border-radius:50%;display:grid;place-items:center;color:#76a47e;font-size:23px;line-height:1}
 .received-card h1{margin:0 0 42px;font:400 clamp(34px,4.5vw,52px)/1.05 var(--serif);letter-spacing:-.025em}
 .received-card p{margin:0 auto 18px;max-width:600px;color:#d3cec4;font-size:clamp(16px,1.4vw,18px)}
+.received-home{display:inline-flex;align-items:center;min-height:48px;margin-top:30px;color:#f4efe5;font-size:12px;letter-spacing:.18em;text-decoration:none;border-bottom:1px solid #a50f16;transition:color .2s ease,border-color .2s ease}
+.received-home:hover{color:#fff;border-color:#d71920}
+.received-home:focus-visible{outline:2px solid #f4efe5;outline-offset:5px}
 @media(max-width:700px){
   .why-copy p{font-size:18px;line-height:1.45}
   .calling-card-intro{padding-bottom:42px}
