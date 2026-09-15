@@ -99,7 +99,7 @@ export default function Home() {
         <p>Sometimes we arrive where your people already did.</p>
         <p>Sometimes something makes us stop and say:</p>
         <strong>Wait.</strong>
-        <p>If there is something worth finding out, your experts can take it further than we ever could.</p>
+        <p>If there is something worth finding out, your experts can take it further.</p>
         <p>The decision remains yours.</p>
       </div>
     </section>
@@ -146,6 +146,6 @@ export default function Home() {
       </div>
     </form>
 
-    <footer><span>DOUBLE DUMPLINGS</span><span>BACKED BY CAELVERUM</span><span>IDEAS TRAVEL WELL.</span></footer>
+    <footer><span>DOUBLE DUMPLINGS</span><span>BACKED BY CAELVERUM</span><span>PEARCECISION-BACKED DECISIONS.</span></footer>
   </main>;
 }
