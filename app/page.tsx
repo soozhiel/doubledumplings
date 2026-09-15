@@ -117,7 +117,6 @@ export default function Home() {
 
     <form ref={formRef} className="calling-card-form" onSubmit={submit} onInput={saveDraft}>
       <section className="form-section calling-card-section">
-        <header><h2>WHO ARE YOU?</h2></header>
         <div className="grid two">
           <Field label="Name" name="name" required />
           <Field label="Best city to meet (Munich, Sydney, New York, Tokyo, London etc)" name="bestCity" required />
@@ -125,7 +124,7 @@ export default function Home() {
       </section>
 
       <section className="form-section calling-card-section">
-        <Field label="What can you share at this stage? (I know we just met)" name="whatCanYouShare" required>
+        <Field label="What can you share at this stage?" name="whatCanYouShare" required>
           <textarea name="whatCanYouShare" rows={7} required />
         </Field>
         <Field label="Contact email" name="email" type="email" required />
