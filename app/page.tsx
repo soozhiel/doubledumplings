@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { FormEvent, useEffect, useRef, useState } from "react";
 
-function Field({ label, name, type = "text", required = false, children }: { label: string; name: string; type?: string; required?: boolean; children?: React.ReactNode }) {
+function Field({ label, name, type = "text", required = false, children }: { label: React.ReactNode; name: string; type?: string; required?: boolean; children?: React.ReactNode }) {
   return <label className="field"><span>{label}{required && <em> *</em>}</span>{children || <input name={name} type={type} required={required} />}</label>;
 }
 
@@ -117,17 +117,15 @@ export default function Home() {
 
     <form ref={formRef} className="calling-card-form" onSubmit={submit} onInput={saveDraft}>
       <section className="form-section calling-card-section">
-        <div className="grid two">
-          <Field label="Name" name="name" required />
-          <Field label="Best city to meet (Munich, Sydney, New York, Tokyo, London etc)" name="bestCity" required />
-        </div>
+        <Field label="Name" name="name" required />
+        <Field label="Contact email" name="email" type="email" required />
+        <Field label={<>Best city to meet <small className="label-note">(Munich, Sydney, New York, Tokyo, London etc)</small></>} name="bestCity" required />
       </section>
 
       <section className="form-section calling-card-section">
         <Field label="What can you share at this stage?" name="whatCanYouShare" required>
           <textarea name="whatCanYouShare" rows={7} required />
         </Field>
-        <Field label="Contact email" name="email" type="email" required />
         <label className="honeypot" aria-hidden="true">Website<input name="website" tabIndex={-1} autoComplete="off" /></label>
       </section>
 

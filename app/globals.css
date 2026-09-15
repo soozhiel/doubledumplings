@@ -159,6 +159,7 @@ body{font-size:17px;line-height:1.58}
 .calling-card-section>header{display:block;margin-bottom:38px}
 .calling-card-section>header h2{font-size:clamp(28px,2.6vw,34px)}
 .calling-card-section .field>span{letter-spacing:.01em}
+.calling-card-section .label-note{display:inline;margin:0 0 0 .35em;font:400 .76em/1.35 var(--sans);letter-spacing:.02em}
 .received-page{min-height:100vh;display:grid;place-items:center;padding:60px 24px}
 .received-card{width:min(100%,680px);text-align:center}
 .received-tick{width:46px;height:46px;margin:0 auto 34px;border:1px solid #5f8f68;border-radius:50%;display:grid;place-items:center;color:#76a47e;font-size:23px;line-height:1}
