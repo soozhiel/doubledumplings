@@ -149,3 +149,27 @@ body{font-size:17px;line-height:1.58}
   .editorial h1{font-size:32px}.brief-intro h1{font-size:36px}.form-section>header h2{font-size:25px}
   .warning,.independence,.commercial{padding:26px 18px}
 }
+
+.why .editorial-grid{display:block}
+.why-copy{max-width:680px}
+.why-copy p{margin:0 0 1.15rem;font:400 clamp(19px,1.8vw,24px)/1.45 var(--serif)}
+.calling-card-intro{padding-bottom:58px}
+.calling-card-form{max-width:760px}
+.calling-card-section{padding-bottom:58px;margin-bottom:58px}
+.calling-card-section>header{display:block;margin-bottom:38px}
+.calling-card-section>header h2{font-size:clamp(28px,2.6vw,34px)}
+.calling-card-section .field>span{letter-spacing:.01em}
+.received-page{min-height:100vh;display:grid;place-items:center;padding:60px 24px}
+.received-card{width:min(100%,680px);text-align:center}
+.received-tick{width:46px;height:46px;margin:0 auto 34px;border:1px solid #5f8f68;border-radius:50%;display:grid;place-items:center;color:#76a47e;font-size:23px;line-height:1}
+.received-card h1{margin:0 0 42px;font:400 clamp(34px,4.5vw,52px)/1.05 var(--serif);letter-spacing:-.025em}
+.received-card p{margin:0 auto 18px;max-width:600px;color:#d3cec4;font-size:clamp(16px,1.4vw,18px)}
+@media(max-width:700px){
+  .why-copy p{font-size:18px;line-height:1.45}
+  .calling-card-intro{padding-bottom:42px}
+  .calling-card-section{padding-bottom:44px;margin-bottom:44px}
+  .calling-card-section>header{margin-bottom:28px}
+  .received-page{padding:48px 22px}
+  .received-tick{margin-bottom:28px}
+  .received-card h1{margin-bottom:34px;font-size:clamp(30px,8.5vw,36px);line-height:1.08}
+}
