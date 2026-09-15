@@ -120,20 +120,13 @@ export default function Home() {
         <header><h2>WHO ARE YOU?</h2></header>
         <div className="grid two">
           <Field label="Name" name="name" required />
-          <Field label="Role" name="role" required />
-          <Field label="Organisation" name="organisation" required />
-          <Field label="Location" name="location" required />
-          <Field label="Website" name="websiteUrl" type="url" />
-          <Field label="Social" name="social" />
+          <Field label="Best city to meet (Munich, Sydney, New York, Tokyo, London etc)" name="bestCity" required />
         </div>
       </section>
 
       <section className="form-section calling-card-section">
-        <Field label="WHAT BRINGS YOU TO DOUBLE DUMPLINGS?" name="whatBringsYou" required>
-          <textarea name="whatBringsYou" rows={7} required />
-        </Field>
-        <Field label="WHY WOULD YOU LIKE TO HAVE A CONVERSATION?" name="whyConversation" required>
-          <textarea name="whyConversation" rows={7} required />
+        <Field label="What can you share at this stage? (I know we just met)" name="whatCanYouShare" required>
+          <textarea name="whatCanYouShare" rows={7} required />
         </Field>
         <Field label="Contact email" name="email" type="email" required />
         <label className="honeypot" aria-hidden="true">Website<input name="website" tabIndex={-1} autoComplete="off" /></label>

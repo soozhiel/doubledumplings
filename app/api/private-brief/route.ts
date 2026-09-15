@@ -3,18 +3,11 @@ import { z } from "zod";
 
 const stripControls = (value: string) => value.replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, "").trim();
 const text = (max = 8000) => z.string().transform(stripControls).pipe(z.string().min(1).max(max));
-const optional = (max = 1000) => z.string().transform(stripControls).pipe(z.string().max(max)).optional().or(z.literal(""));
-
 const callingCardSchema = z.object({
   website: z.string().max(0).optional(),
   name: text(300),
-  role: text(300),
-  organisation: text(500),
-  location: text(500),
-  websiteUrl: optional(1000),
-  social: optional(1000),
-  whatBringsYou: text(),
-  whyConversation: text(),
+  bestCity: text(500),
+  whatCanYouShare: text(),
   email: z.string().transform(stripControls).pipe(z.string().email().max(320)),
 }).strict();
 
@@ -57,7 +50,7 @@ async function storeCallingCard(id: string, data: z.infer<typeof callingCardSche
   const response = await fetch(`${url}/rest/v1/private_briefs`, {
     method: "POST",
     headers: { apikey: key, Authorization: `Bearer ${key}`, "Content-Type": "application/json", Prefer: "return=minimal" },
-    body: JSON.stringify({ id, name: data.name, organisation: data.organisation, country: data.location, contact_email: data.email, payload, status: "new" }),
+    body: JSON.stringify({ id, name: data.name, organisation: "", country: data.bestCity, contact_email: data.email, payload, status: "new" }),
     cache: "no-store",
   });
   return { ok: response.ok, missing: false as const };
