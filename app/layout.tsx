@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/" },
-  openGraph: { title, description, type: "website", siteName: "Double Dumplings", images: [{ url: "/api/poster", width: 1024, height: 1536, alt: "Double Dumplings — independent perspective, real questions, better decisions" }] },
-  twitter: { card: "summary_large_image", title, description, images: ["/api/poster"] },
+  openGraph: { title, description, type: "website", siteName: "Double Dumplings", images: [{ url: "/double-dumplings-poster.jpg", width: 1024, height: 1536, alt: "Double Dumplings — independent perspective, real questions, better decisions" }] },
+  twitter: { card: "summary_large_image", title, description, images: ["/double-dumplings-poster.jpg"] },
   icons: { icon: "/favicon.svg" },
 };
 

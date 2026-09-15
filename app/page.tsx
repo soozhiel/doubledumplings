@@ -66,7 +66,7 @@ export default function Home() {
   return <main>
     <section className="poster-stage" aria-label="Double Dumplings poster">
       <div className="poster-wrap">
-        <Image src="/api/poster" alt="Double Dumplings — Pearcecision-backed decisions" width={1024} height={1536} priority unoptimized sizes="(max-width:740px) 100vw, 880px" />
+        <Image src="/double-dumplings-poster.jpg" alt="Double Dumplings — Pearcecision-backed decisions" width={1024} height={1536} priority unoptimized sizes="(max-width:740px) 100vw, 880px" />
         <button className="poster-hotspot" onClick={() => document.getElementById("calling-card")?.scrollIntoView({ behavior: "smooth" })} aria-label="Bring us the problem — go to calling card" />
       </div>
     </section>
