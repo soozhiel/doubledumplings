@@ -3,11 +3,12 @@ import { z } from "zod";
 
 const stripControls = (value: string) => value.replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, "").trim();
 const text = (max = 8000) => z.string().transform(stripControls).pipe(z.string().min(1).max(max));
+const optionalText = (max = 8000) => z.string().transform(stripControls).pipe(z.string().max(max));
 const callingCardSchema = z.object({
   website: z.string().max(0).optional(),
   name: text(300),
   bestCity: text(500),
-  whatCanYouShare: text(),
+  whatCanYouShare: optionalText(),
   email: z.string().transform(stripControls).pipe(z.string().email().max(320)),
 }).strict();
 

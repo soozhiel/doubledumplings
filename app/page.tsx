@@ -123,14 +123,15 @@ export default function Home() {
       </section>
 
       <section className="form-section calling-card-section">
-        <Field label="What can you share at this stage?" name="whatCanYouShare" required>
-          <textarea name="whatCanYouShare" rows={7} required />
+        <Field label="What can you share at this stage?" name="whatCanYouShare">
+          <textarea name="whatCanYouShare" rows={7} />
         </Field>
         <label className="honeypot" aria-hidden="true">Website<input name="website" tabIndex={-1} autoComplete="off" /></label>
       </section>
 
       <div className="send">
         <p>Your draft is kept only in this browser tab until it is sent or closed.</p>
+        <p>Your calling card is received by Caelverum Private Office and used only to consider your request and arrange any next conversation.</p>
         <button type="submit" disabled={pending}>{pending ? "SENDING…" : "LEAVE CALLING CARD →"}</button>
         {error && <p className="error" role="alert">{error}</p>}
       </div>
