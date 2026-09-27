@@ -137,6 +137,16 @@ export default function Home() {
       </div>
     </form>
 
-    <footer><span>DOUBLE DUMPLINGS</span><span>BACKED BY CAELVERUM</span><span>PEARCECISION-BACKED DECISIONS.</span></footer>
+    <footer>
+      <div className="footer-brand">
+        <span>DOUBLE DUMPLINGS</span>
+        <span>BACKED BY CAELVERUM</span>
+      </div>
+      <i className="footer-rule" aria-hidden="true" />
+      <a className="footer-soozhee" href="https://soozhee.vercel.app" target="_blank" rel="noreferrer">
+        <span>SOOZHEE</span>
+        <span className="footer-soozhee-arrow" aria-hidden="true" />
+      </a>
+    </footer>
   </main>;
 }
