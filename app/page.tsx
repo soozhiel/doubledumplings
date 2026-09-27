@@ -145,7 +145,7 @@ export default function Home() {
       <i className="footer-rule" aria-hidden="true" />
       <a className="footer-soozhee" href="https://soozhee.vercel.app" target="_blank" rel="noreferrer">
         <span>SOOZHEE</span>
-        <span className="footer-soozhee-arrow" aria-hidden="true" />
+        <span className="footer-soozhee-arrow" aria-hidden="true">→</span>
       </a>
     </footer>
   </main>;
