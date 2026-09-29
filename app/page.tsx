@@ -134,6 +134,13 @@ export default function Home() {
         <p>Your calling card is received by Caelverum Private Office and used only to consider your request and arrange any next conversation.</p>
         <button type="submit" disabled={pending}>{pending ? "SENDING…" : "LEAVE CALLING CARD →"}</button>
         {error && <p className="error" role="alert">{error}</p>}
+        <nav className="meet-links" aria-label="Meet the team">
+          <a className="meet-link" href="https://soozhee.vercel.app" target="_blank" rel="noreferrer">
+            Meet Soozhee <span className="meet-link-arrow" aria-hidden="true">→</span>
+          </a>
+          {/* Brian URL TBD — replace span with <a href="..." className="meet-link"> when ready */}
+          <span className="meet-link meet-link-pending">Meet Brian</span>
+        </nav>
       </div>
     </form>
 
@@ -142,11 +149,6 @@ export default function Home() {
         <span>DOUBLE DUMPLINGS</span>
         <span>BACKED BY CAELVERUM</span>
       </div>
-      <i className="footer-rule" aria-hidden="true" />
-      <a className="footer-soozhee" href="https://soozhee.vercel.app" target="_blank" rel="noreferrer">
-        <span>SOOZHEE</span>
-        <span className="footer-soozhee-arrow" aria-hidden="true">→</span>
-      </a>
     </footer>
   </main>;
 }
