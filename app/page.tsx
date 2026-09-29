@@ -136,10 +136,10 @@ export default function Home() {
         {error && <p className="error" role="alert">{error}</p>}
         <nav className="meet-links" aria-label="Meet the team">
           <a className="meet-link" href="https://soozhee.vercel.app" target="_blank" rel="noreferrer">
-            Meet Soozhee <span className="meet-link-arrow" aria-hidden="true">→</span>
+            MEET SOOZHEE <span className="meet-link-arrow" aria-hidden="true">→</span>
           </a>
           {/* Brian URL TBD — replace span with <a href="..." className="meet-link"> when ready */}
-          <span className="meet-link meet-link-pending">Meet Brian</span>
+          <span className="meet-link meet-link-pending">MEET BRIAN</span>
         </nav>
       </div>
     </form>
